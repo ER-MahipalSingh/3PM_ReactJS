@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const navLink = [
-    { id: 1, page: <Hookes />, path: "/hookes" },
-    { id: 2, page: <Rest />, path: "/rest" },
-    { id: 3, page: <Map />, path: "/map" },
+    { id: 1, page: "Hookes", path: "/hookes" },
+    { id: 2, page: "Rest", path: "/rest" },
+    { id: 3, page: "Map", path: "/map" },
+    { id: 3, page: "Parent", path: "/parent" },
   ];
   return (
     <div className="home-box">
