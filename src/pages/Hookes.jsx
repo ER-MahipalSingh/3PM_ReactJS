@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Hookes = () => {
-  return (
-    <div>Hookes</div>
-  )
-}
+  const [count, setCount] = useState(0);
+  const [darkmode, setDarkmode] = useState(false);
 
-export default Hookes
+  const countIncHandler = () => {
+    setCount((pre) => pre + 1);
+  };
+
+  const countDecHandler = () => {
+    if (count === 0) return;
+    setCount((pre) => pre - 1);
+  };
+
+  const chnageDarkmodeHandler = () => {
+    setDarkmode((pre) => !pre);
+  };
+
+  const darkmodeStyle = {
+    backgroundColor: darkmode ? "black" : "white",
+    color: darkmode ? "white" : "black",
+  };
+  return (
+    <div style={darkmodeStyle}>
+      <h2>Count: {count}</h2>
+      <button onClick={countIncHandler}>Click +</button>
+      <button onClick={countDecHandler}>Click -</button>
+      <button onClick={chnageDarkmodeHandler}>Dark Mode</button>
+    </div>
+  );
+};
+
+export default Hookes;
