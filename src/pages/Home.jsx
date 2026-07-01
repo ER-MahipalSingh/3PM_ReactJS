@@ -12,6 +12,7 @@ const Home = () => {
     { id: 4, page: "Parent", path: "/parent" },
     { id: 5, page: "Effect", path: "/effect" },
     { id: 6, page: "Local", path: "/local" },
+    { id: 6, page: "Form", path: "/form" },
   ];
   return (
     <div className="home-box">
